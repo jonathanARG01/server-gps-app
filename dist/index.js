@@ -25,8 +25,9 @@ server.app.use(cors_1.default({ origin: true, credentials: true }));
 server.app.use('/user', usuario_1.default);
 server.app.use('/posts', post_1.default);
 server.app.use('/vehiculos', vehiculo_1.default);
+const DB_URI = process.env.DB_URI;
 // Conectar DB
-mongoose_1.default.connect('mongodb://localhost:27017/gpsusersdb', {
+mongoose_1.default.connect(DB_URI, {
 // useNewUrlParser: true,
 // useUnifiedTopology: true,
 // useCreateIndex: true,
@@ -34,8 +35,18 @@ mongoose_1.default.connect('mongodb://localhost:27017/gpsusersdb', {
 }, (err) => {
     if (err)
         throw err;
-    console.log('Base de datos ONLINE 4.0');
+    console.log('Base de datos ONLINE a DB_URI', DB_URI);
 });
+// // Conectar DB
+// mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
+//                     // useNewUrlParser: true,
+//                     // useUnifiedTopology: true,
+//                     // useCreateIndex: true,
+//                     // useFindAndModify: false
+//                 }, ( err ) => {
+//    if ( err ) throw err;
+//    console.log('Base de datos ONLINE a localhost:27017/gpsusersdb');
+// });
 // Levantar express
 server.start(() => {
     console.log(`Servidor corriendo en puerto ${server.port}`);

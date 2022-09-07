@@ -37,8 +37,11 @@ server.app.use('/vehiculos', vehiculoRoutes );
 
 
 
+const DB_URI : any = process.env.DB_URI;
+
+
 // Conectar DB
-mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
+mongoose.connect(DB_URI , {
                     // useNewUrlParser: true,
                     // useUnifiedTopology: true,
                     // useCreateIndex: true,
@@ -47,9 +50,29 @@ mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
 
    if ( err ) throw err;
 
-   console.log('Base de datos ONLINE 4.0');
+   console.log('Base de datos ONLINE a DB_URI', DB_URI);
    
 });
+
+
+
+
+
+// // Conectar DB
+// mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
+//                     // useNewUrlParser: true,
+//                     // useUnifiedTopology: true,
+//                     // useCreateIndex: true,
+//                     // useFindAndModify: false
+//                 }, ( err ) => {
+
+//    if ( err ) throw err;
+
+//    console.log('Base de datos ONLINE a localhost:27017/gpsusersdb');
+   
+// });
+
+
 
 
 
