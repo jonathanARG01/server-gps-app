@@ -47,7 +47,7 @@ mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
 
    if ( err ) throw err;
 
-   console.log('Base de datos ONLINE 2.0');
+   console.log('Base de datos ONLINE 4.0');
    
 });
 
