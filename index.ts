@@ -50,7 +50,7 @@ mongoose.connect(DB_URI , {
 
    if ( err ) throw err;
 
-   console.log('Base de datos ONLINE a DB_URI', DB_URI);
+   console.log('Base de datos ONLINE en DB_URI', DB_URI);
    
 });
 
