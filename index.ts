@@ -58,6 +58,9 @@ mongoose.connect(DB_URI , {
 
 
 
+
+
+
 // // Conectar DB
 // mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
 //                     // useNewUrlParser: true,
