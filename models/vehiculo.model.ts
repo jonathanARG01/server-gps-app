@@ -56,7 +56,6 @@ const vehiculoSchema = new Schema({
     },
     rutConductor: {
         type: String,
-        unique: true,
         required: [ true, 'El RUT es obligatorio' ]
     },
     movilConductor: {

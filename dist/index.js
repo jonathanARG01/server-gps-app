@@ -35,7 +35,7 @@ mongoose_1.default.connect(DB_URI, {
 }, (err) => {
     if (err)
         throw err;
-    console.log('Base de datos ONLINE a DB_URI', DB_URI);
+    console.log('Base de datos ONLINE en DB_URI', DB_URI);
 });
 // // Conectar DB
 // mongoose.connect('mongodb://localhost:27017/gpsusersdb', {
