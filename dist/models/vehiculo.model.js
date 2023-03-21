@@ -54,6 +54,7 @@ const vehiculoSchema = new mongoose_1.Schema({
     },
     rutConductor: {
         type: String,
+        unique: true,
         required: [true, 'El RUT es obligatorio']
     },
     movilConductor: {
